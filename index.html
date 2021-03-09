@@ -4,20 +4,21 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Дипломный проект</title>
+	<title>Дмитрий Алексеев</title>
 	<link rel="stylesheet" href="css/Normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="fontawesome/css/all.css">
+	<link rel="icon" href="img/favicon.png" type="image/x-icon">
 </head>
 
 <body>
 	<header class="header" id="header">
 		<div class="container">
-			<div class="header__burger">
+			<button class="header__burger">
 				<span></span>
-			</div>
+			</button>
 			<ul class="header__menu">
 				<li><a href="#skills-scroll" class="scroll-to">Услуги</a></li>
 				<li><a href="#portfolio-scroll" class="scroll-to">Портфолио</a></li>
@@ -25,7 +26,7 @@
 			</ul>
 			<a class="header__tel" href="tel:+74999955577">+7 (499) 995-55-77</a>
 			<button class="header__button modal-btn">Заказать звонок</button>
-			<button class="header__button-tel modal-btn"><i class="fas fa-phone-alt"></i></button>
+			<button aria-label="phone" class="header__button-tel modal-btn"><i class="fas fa-phone-alt"></i></button>
 		</div>
 	</header>
 	<section class="title">
@@ -119,10 +120,13 @@
 			<div class="footer__socials">
 				<button class="footer__socials-button modal-btn">Заказать звонок</button>
 				<ul class="footer__socials-icon">
-					<li class="vk"><a target="_blank" href="https://vk.com/"><span></span></a></li>
-					<li class="fb"><a target="_blank" href="https://www.facebook.com/"><span></span></a></li>
-					<li class="tw"><a target="_blank" href="https://twitter.com/twitter"><span></span></a></li>
-					<li class="inst"><a target="_blank" href="https://www.instagram.com/?hl=ru"><span></span></a></li>
+					<li class="vk"><a aria-label="VK" target="_blank" href="https://vk.com/"><span></span></a></li>
+					<li class="fb"><a aria-label="Facebook" target="_blank"
+							href="https://www.facebook.com/"><span></span></a></li>
+					<li class="tw"><a aria-label="Twitter" target="_blank"
+							href="https://twitter.com/twitter"><span></span></a></li>
+					<li class="inst"><a aria-label="Instagram" target="_blank"
+							href="https://www.instagram.com/?hl=ru"><span></span></a></li>
 				</ul>
 			</div>
 		</div>

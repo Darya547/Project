@@ -44,6 +44,8 @@ a {
 
 .header__burger {
 	display: none;
+	border: none;
+	cursor: pointer;
 }
 
 .header__menu {
