@@ -66,20 +66,29 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 	$(".modal-btn").click(function () {
-		$("#modal-one").addClass("show");
+		$("#modal-one").fadeIn();
+		$(".popup__overlay").animate({
+			opacity: 1,
+		}, 800);
 		$("html, body").addClass("scroll");
 	});
 
 	$(".popup__body-close").click(function (e) {
 		e.preventDefault();
-		$("#modal-one").removeClass("show");
+		$("#modal-one").fadeOut(800);
+		$(".popup__overlay").animate({
+			opacity: 0,
+		}, 800);
 		$("html, body").removeClass("scroll");
 	});
 
 	$('#modal-one').click(function (e) {
 		if ($(e.target).closest('.popup__body').length == 0) {
-			$(this).removeClass("show");
-			$(".thanks-popup").removeClass("show");
+			$(this).fadeOut(800);
+			$(".thanks-popup").fadeOut(800);
+			$(".popup__overlay").animate({
+				opacity: 0,
+			}, 800);
 			$("html, body").removeClass("scroll");
 		}
 	});
@@ -87,21 +96,27 @@ $(document).ready(function () {
 
 $(document).ready(function () {
 	$(".modal-btn-two").click(function () {
-		$("#modal-two").addClass("show");
+		$("#modal-two").fadeIn();
+		$(".popup__overlay").animate({
+			opacity: 1,
+		}, 800);
 		$("html, body").addClass("scroll");
 	});
 
 	$(".popup__body-close").click(function (e) {
 		e.preventDefault();
-		$("#modal-two").removeClass("show");
+		$("#modal-two").fadeOut(800);
 		$("html, body").removeClass("scroll");
-		$(".thanks-popup").removeClass("show");
+		$(".thanks-popup").fadeOut(800);
 	});
 
 	$('#modal-two').click(function (e) {
 		if ($(e.target).closest('.popup__body').length == 0) {
-			$(this).removeClass("show");
-			$(".thanks-popup").removeClass("show");
+			$(this).fadeOut(800);
+			$(".thanks-popup").fadeOut(800);
+			$(".popup__overlay").animate({
+				opacity: 0,
+			}, 800);
 			$("html, body").removeClass("scroll");
 		}
 	});
@@ -147,7 +162,7 @@ $(document).ready(function () {
 				// eslint-disable-next-line func-names
 			}).done(() => {
 				$('.popup__body').addClass("none");
-				$('.thanks-popup').addClass("show");
+				$('.thanks-popup').fadeIn();
 				th.trigger('reset');
 			});
 			return false;
@@ -193,7 +208,7 @@ $(document).ready(function () {
 				// eslint-disable-next-line func-names
 			}).done(() => {
 				$('.popup__body').addClass("none");
-				$('.thanks-popup').addClass("show");
+				$('.thanks-popup').fadeIn();
 				th.trigger('reset');
 			});
 			return false;
