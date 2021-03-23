@@ -46,6 +46,7 @@ a {
 	display: none;
 	border: none;
 	cursor: pointer;
+	background-color: transparent;
 }
 
 .header__menu {
